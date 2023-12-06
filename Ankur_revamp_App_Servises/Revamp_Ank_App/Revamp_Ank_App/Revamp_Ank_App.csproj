@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>false</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="MongoDB.Driver" Version="2.22.0" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.22.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.15" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Ankur.Revam.Application\Commands\" />
+    <Folder Include="Ankur.Revam.Application\Handler\" />
+    <Folder Include="Ankur.Revam.Application\Mapping\" />
+    <Folder Include="Ankur.Revam.Application\Services\" />
+    <Folder Include="Ankur.Revam.Application\Queries\" />
+    <Folder Include="Ankur.Revamp.Infrastructure\Decoartes\" />
+    <Folder Include="DomainEntites\Excptions\" />
+    <Folder Include="Ankur.Revam.Application\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AnkurJfrogLibSQLAgent">
+      <HintPath>..\..\..\Mongo_revamp_agenet\MongoAnkur_Sql_Helper\AnkurJfrogLibSQLAgent\AnkurJfrogLibSQLAgent\bin\Release\AnkurJfrogLibSQLAgent.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\..\..\Ankur_JFROG_Revamp_lib\ClassLibrary1\ClassLibrary1\bin\Release\ClassLibrary1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
