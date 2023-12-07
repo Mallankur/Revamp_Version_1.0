@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ankur\\Desktop\\AnkurCatcheck_Prod_Env\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\Revamp_Ank_App.csproj": {}
+    "C:\\Users\\ankur\\Desktop\\AnkurApp_Catcheck_Revamp_Prod\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\Revamp_Ank_App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ankur\\Desktop\\AnkurCatcheck_Prod_Env\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\Revamp_Ank_App.csproj": {
+    "C:\\Users\\ankur\\Desktop\\AnkurApp_Catcheck_Revamp_Prod\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\Revamp_Ank_App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ankur\\Desktop\\AnkurCatcheck_Prod_Env\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\Revamp_Ank_App.csproj",
+        "projectUniqueName": "C:\\Users\\ankur\\Desktop\\AnkurApp_Catcheck_Revamp_Prod\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\Revamp_Ank_App.csproj",
         "projectName": "Revamp_Ank_App",
-        "projectPath": "C:\\Users\\ankur\\Desktop\\AnkurCatcheck_Prod_Env\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\Revamp_Ank_App.csproj",
+        "projectPath": "C:\\Users\\ankur\\Desktop\\AnkurApp_Catcheck_Revamp_Prod\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\Revamp_Ank_App.csproj",
         "packagesPath": "C:\\Users\\ankur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ankur\\Desktop\\AnkurCatcheck_Prod_Env\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\obj\\",
+        "outputPath": "C:\\Users\\ankur\\Desktop\\AnkurApp_Catcheck_Revamp_Prod\\Revamp_Version_1.0\\Ankur_revamp_App_Servises\\Revamp_Ank_App\\Revamp_Ank_App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ankur\\AppData\\Roaming\\NuGet\\NuGet.Config",
