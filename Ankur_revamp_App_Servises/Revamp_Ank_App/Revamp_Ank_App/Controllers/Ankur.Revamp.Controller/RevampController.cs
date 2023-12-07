@@ -27,45 +27,13 @@ namespace Revamp_Ank_App.Controllers.Ankur.Revamp.Controller
         [HttpPost]
         public async Task<IActionResult> Post( int CycleId)
         {
-            // var connectionstring = "server=AVINEXSERVER6;database=CatCheckPro;Integrated Security=false;User ID=CCAdmin;Password=Catalyst1*;Trusted_Connection=No;";
-            var connectionstring = "Server=AVINEXSERVER6;Database=CatCheckPro;Integrated Security=false;User ID=CCAdmin;Password=Catalyst1*;Trusted_Connection=No;TrustServerCertificate=true;";
-            var result = GetDataFromSQL(connectionstring, CycleId);
 
-            if (result!=null)
-            {
-                var mongores = await _repository.CreateData_Using_SQL_SP_ConnectorAsync(result);
-               
-            }
+            var result = await _repository.CreateData_Using_SQL_SP_ConnectorAsync();
             return Ok("Data received and processed");
         }
 
-        [ApiExplorerSettings(IgnoreApi = true)]
-        public string GetDataFromSQL(string sqlConnectionString, int CycleId)
-        {
-          
-
-            using (SqlConnection sqlConnection = new SqlConnection(sqlConnectionString))
-            {
-                sqlConnection.Open();
-
-                SqlCommand sqlCommand = new SqlCommand("CC_Revamp_uspGetUMData", sqlConnection);
-                sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.AddWithValue("@CycleId", CycleId);
-                sqlCommand.Parameters.AddWithValue("@RDIds", "5893209,5893210");
-
-
-
-
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-
-
-                string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(dataTable);
-
-                return jsonData;
-            }
-        }
+        
+        
 
 
 

@@ -8,7 +8,7 @@ namespace Revamp_Ank_App.DomainEntites.Repositores.Entites
 
         Task<RevampMongoDataModel> GetRevamDataByRDIDSAsync(String[] rdids, CancellationToken cancellationToken);
 
-        Task<bool> CreateData_Using_SQL_SP_ConnectorAsync(string sqlserilzer);
+        Task<bool> CreateData_Using_SQL_SP_ConnectorAsync();
 
     }
 }

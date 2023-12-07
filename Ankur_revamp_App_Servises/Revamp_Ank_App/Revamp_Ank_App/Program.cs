@@ -25,8 +25,8 @@ builder.Services.Configure<MongoScoket>(builder.Configuration.GetSection("MongoO
 builder.Services.AddMvc().AddXmlSerializerFormatters();
 
 builder.Services.AddScoped<ISQLconnecterAnkur, RevampRepositoryAnkurServises>();
-//builder.Services.AddScoped<ISQLconnecterAnkurMall228, SQLConnetter>();
-builder.Services.AddScoped<SQLConnectorOptions>();
+builder.Services.AddScoped<ISQLconnecterAnkurMall228, SQLConnetter>();
+builder.Services.AddScoped<SQLConnetter>();
 
 
 builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
