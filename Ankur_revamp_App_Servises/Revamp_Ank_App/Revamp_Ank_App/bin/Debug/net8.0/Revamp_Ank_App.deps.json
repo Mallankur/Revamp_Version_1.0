@@ -13,9 +13,7 @@
           "MongoDB.Driver.Core": "2.22.0",
           "Newtonsoft.Json": "13.0.3",
           "Newtonsoft.Json.Schema": "3.0.15",
-          "Swashbuckle.AspNetCore": "6.4.0",
-          "AnkurJfrogLibSQLAgent": "1.0.0.0",
-          "ClassLibrary1": "1.0.0.0"
+          "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
           "Revamp_Ank_App.dll": {}
@@ -608,22 +606,6 @@
             "fileVersion": "0.6.2.0"
           }
         }
-      },
-      "AnkurJfrogLibSQLAgent/1.0.0.0": {
-        "runtime": {
-          "AnkurJfrogLibSQLAgent.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "ClassLibrary1/1.0.0.0": {
-        "runtime": {
-          "ClassLibrary1.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -1059,16 +1041,6 @@
       "sha512": "sha512-jPao/LdUNLUz8rn3H1D8W7wQbZsRZM0iayvWI4xGejJg3XJHT56gcmYdgmCGPdJF1UEBqUjucCRrFB+4HbJsbw==",
       "path": "zstdsharp.port/0.6.2",
       "hashPath": "zstdsharp.port.0.6.2.nupkg.sha512"
-    },
-    "AnkurJfrogLibSQLAgent/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ClassLibrary1/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

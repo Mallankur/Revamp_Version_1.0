@@ -1,4 +1,4 @@
-﻿using ClassLibrary1;
+﻿
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson.IO;
@@ -16,36 +16,36 @@ namespace Revamp_Ank_App.Ankur.Revamp.Infrastructure.Repositories
     public class RevampRepositoryAnkurServises : ISQLconnecterAnkur
     {
         public IMongoCollection<RevampMongoDataModel> RevampCollection { get; set; }
-       // private readonly SQLConnetter _sqlConnetter;
-        public RevampRepositoryAnkurServises(IOptions<MongoScoket> connect)
+        private readonly SQLConnetter _sqlConnetter;
+        public RevampRepositoryAnkurServises(IOptions<MongoScoket> connect, SQLConnetter sql)
         {
-           //sqlConnetter = sql;    
+            _sqlConnetter = sql;    
             MongoClient client = new MongoClient(connect.Value.ConnectionString);
             IMongoDatabase database = client.GetDatabase(connect.Value.DatabaseName);
             RevampCollection = database.GetCollection<RevampMongoDataModel>(connect.Value.CollectionName);
         }
-        //public async Task<string> FetchAllSQLData(string storeProcedureName, int CycleId, string rdids)
-        //{
-        //    return await _sqlConnetter.FetchAllSQLData(_sqlConnetter._connectionString, storeProcedureName, CycleId, rdids);
-        //}
-        public async Task<bool> CreateData_Using_SQL_SP_ConnectorAsync(string result )
+        public async Task<string> FetchAllSQLData(string storeProcedureName, int CycleId, string rdids)
+        {
+            return await _sqlConnetter.FetchAllSQLData(_sqlConnetter._connectionString, storeProcedureName, CycleId, rdids);
+        }
+        public async Task<bool> CreateData_Using_SQL_SP_ConnectorAsync()
         {
             bool IsInseretd = false;
-            var res = result; 
+            var res = await FetchAllSQLData("CC_Revamp_uspGetUMData", 3081, "5893209,5893210");
             IEnumerable<RevampMongoDataModel> revamapData = Newtonsoft.Json.JsonConvert.DeserializeObject<IEnumerable<RevampMongoDataModel>>(res, new DateTimeToMillisecondConverter());
-            if (revamapData.Any()) 
-            { 
+            if (revamapData.Any())
+            {
                 RevampCollection.InsertMany(revamapData);
-                IsInseretd = true;  
+                IsInseretd = true;
             }
 
-           return IsInseretd;   
+            return IsInseretd;
 
 
 
         }
-        
-        
+
+
 
 
 
